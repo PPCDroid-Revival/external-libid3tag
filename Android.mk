@@ -1,3 +1,5 @@
+ifeq ($(strip $(BUILD_WITH_GST)),true)
+
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -32,3 +34,5 @@ LOCAL_CFLAGS := \
     -DHAVE_CONFIG_H
 
 include $(BUILD_STATIC_LIBRARY)
+
+endif
